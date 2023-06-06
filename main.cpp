@@ -93,7 +93,7 @@ class Transaction {
  public:
   Transaction(Buyer buyer, Novel novel) {
     if (buyer.balance < novel.price) {
-      cout << "cannot buy" << endl;
+      cout << "Your balance is not enough" << endl;
     } else {
       cout << "Succes Buy Book " << novel.getTitle() << endl;
       cout << "Enjoy reading: " << novel.getTitle() << endl;
@@ -105,8 +105,10 @@ class Transaction {
 
 int main() {
   Buyer buyer1("Denny", "Male", "081xxx", "Surabaya", 100000);
-  Novel novel1("Hujan", "Tere Liye", 2020, 20000);
+  Novel novel1("gerhana", "kuch kuch hota hai", 2020, 20000);
+  Novel novel2("mendung", "om shanti om", 2019, 20000);
   Transaction transaction1(buyer1, novel1);
+  Transaction transaction2(buyer1, novel2);
 
   return 0;
 }
